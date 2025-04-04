@@ -9,3 +9,6 @@ psycopg2-binary>=2.9  # PostgreSQL adapter
 # Development (optional but useful)
 python-dotenv>=1.0  # For environment variables
 django-environ>=0.11  # Advanced env handling
+
+drf-spectacular>=0.27.0  # OpenAPI 3.0 generation
+drf-spectacular-sidecar>=2024.5.0  # For Swagger UI (optional but recommended)
