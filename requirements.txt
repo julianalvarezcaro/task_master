@@ -1,0 +1,11 @@
+# Core
+Django>=4.2,<5.0
+djangorestframework>=3.14
+djangorestframework-simplejwt>=5.3  # For JWT authentication
+
+# Database (PostgreSQL recommended)
+psycopg2-binary>=2.9  # PostgreSQL adapter
+
+# Development (optional but useful)
+python-dotenv>=1.0  # For environment variables
+django-environ>=0.11  # Advanced env handling
