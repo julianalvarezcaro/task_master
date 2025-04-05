@@ -1,5 +1,5 @@
-# Import necessary modules from DRF and Django
-from app.models import Task
+from app.tasks.models.character import Character
+from app.tasks.models.task import Task
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
@@ -39,3 +39,11 @@ class TaskSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'custom_fields': {'required': False}  # Makes this field optional
         }
+
+
+class CharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Character
+        fields = ['health', 'strength', 'dexterity', 
+                 'intelligence', 'experience', 'level']
+        read_only_fields = fields  # Stats change via game logic only
